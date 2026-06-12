@@ -886,6 +886,15 @@ a:hover {
   font-size: 1.25rem;
 }
 
+.resource-cover {
+  width: 80px;
+  min-width: 80px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+
 .resource-card h3 {
   font-size: 1rem;
   font-weight: 700;
