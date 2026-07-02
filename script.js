@@ -55,21 +55,6 @@
   els.forEach(function (el) { observer.observe(el); });
 })();
 
-// Newsletter form inline success
-(function () {
-  const form = document.querySelector('.nl-form');
-  if (!form) return;
-
-  form.addEventListener('submit', function () {
-    setTimeout(function () {
-      const row = form.querySelector('.nl-form-row');
-      const msg = form.querySelector('.nl-success');
-      if (row) row.style.display = 'none';
-      if (msg) msg.style.display = 'block';
-    }, 800);
-  });
-})();
-
 // GA4 CTA click tracking
 (function () {
   document.querySelectorAll('a.btn').forEach(function (btn) {
