@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      .title { font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; fill: #ffffff; }
+      .label { font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 600; fill: #6FB3E0; letter-spacing: 0.08em; }
+      .stat-num { font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; fill: #0066B1; }
+      .stat-label { font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 500; fill: #071A2F; }
+      .brand { font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 600; fill: #ffffff; opacity: 0.85; }
+    </style>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071A2F"/>
+      <stop offset="100%" stop-color="#0B2A4A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Decorative task-node motif (roles decomposing into tasks) -->
+  <g opacity="0.35" stroke="#0066B1" stroke-width="2" fill="none">
+    <circle cx="1040" cy="120" r="10"/>
+    <circle cx="1100" cy="90" r="6"/>
+    <circle cx="1110" cy="150" r="6"/>
+    <circle cx="1060" cy="180" r="6"/>
+    <line x1="1040" y1="120" x2="1100" y2="90"/>
+    <line x1="1040" y1="120" x2="1110" y2="150"/>
+    <line x1="1040" y1="120" x2="1060" y2="180"/>
+  </g>
+  <g opacity="0.25" stroke="#0066B1" stroke-width="2" fill="none">
+    <circle cx="90" cy="520" r="9"/>
+    <circle cx="150" cy="560" r="5"/>
+    <circle cx="140" cy="500" r="5"/>
+    <line x1="90" y1="520" x2="150" y2="560"/>
+    <line x1="90" y1="520" x2="140" y2="500"/>
+  </g>
+
+  <text x="80" y="90" class="label" font-size="20">JOB ARCHITECTURE &amp; WORKFORCE PLANNING</text>
+
+  <text x="80" y="170" class="title" font-size="46">Job Architecture Can't Stay</text>
+  <text x="80" y="228" class="title" font-size="46">Static When AI Is Changing</text>
+  <text x="80" y="286" class="title" font-size="46">the Job</text>
+
+  <!-- Stat card -->
+  <rect x="80" y="340" width="460" height="150" rx="12" fill="#ffffff"/>
+  <text x="110" y="410" class="stat-num" font-size="56">66%</text>
+  <text x="110" y="450" class="stat-label" font-size="20">faster skill change in AI-exposed</text>
+  <text x="110" y="475" class="stat-label" font-size="20">roles than in other roles</text>
+
+  <!-- Stat card 2 -->
+  <rect x="560" y="340" width="460" height="150" rx="12" fill="#ffffff"/>
+  <text x="590" y="410" class="stat-num" font-size="56">1 in 5</text>
+  <text x="590" y="450" class="stat-label" font-size="20">employees will need workforce</text>
+  <text x="590" y="475" class="stat-label" font-size="20">redeployment by 2030 (Gartner)</text>
+
+  <text x="80" y="555" class="brand" font-size="22">FelipeUliani.com</text>
+  <text x="80" y="585" class="brand" font-size="16" opacity="0.6">Compensation &amp; Total Rewards Authority</text>
+</svg>
