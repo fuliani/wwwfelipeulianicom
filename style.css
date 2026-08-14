@@ -852,6 +852,50 @@ a:hover {
   color: var(--medium-gray);
 }
 
+.bio-card p {
+  font-size: 0.9375rem;
+  color: var(--black);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.bio-card .nl-form {
+  max-width: none;
+  margin: 0;
+}
+
+.bio-card .nl-form-row {
+  flex-direction: column;
+}
+
+.bio-card .nl-form-row input[type="email"] {
+  color: var(--black);
+  background: var(--white);
+  border-color: var(--border);
+  border-radius: 4px;
+  border-right: 1.5px solid var(--border);
+}
+
+.bio-card .nl-form-row .btn {
+  border-radius: 4px;
+}
+
+.bio-card .nl-form-row input[type="email"]::placeholder {
+  color: var(--medium-gray);
+}
+
+.bio-card .nl-form-row input[type="email"]:focus {
+  border-color: var(--navy);
+}
+
+.bio-card .nl-consent {
+  font-size: 0.8125rem;
+  color: var(--medium-gray);
+  margin-top: 10px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
 /* ---- RESOURCES ---- */
 .resources-grid {
   display: grid;

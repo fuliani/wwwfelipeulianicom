@@ -55,18 +55,23 @@
   els.forEach(function (el) { observer.observe(el); });
 })();
 
-// Newsletter form inline success
+// Newsletter form inline success (handles multiple forms on a page)
 (function () {
-  const form = document.querySelector('.nl-form');
-  if (!form) return;
+  document.querySelectorAll('.nl-form').forEach(function (form) {
+    const redirectTo = form.getAttribute('data-redirect');
 
-  form.addEventListener('submit', function () {
-    setTimeout(function () {
-      const row = form.querySelector('.nl-form-row');
-      const msg = form.querySelector('.nl-success');
-      if (row) row.style.display = 'none';
-      if (msg) msg.style.display = 'block';
-    }, 800);
+    form.addEventListener('submit', function () {
+      setTimeout(function () {
+        if (redirectTo) {
+          window.location.href = redirectTo;
+          return;
+        }
+        const row = form.querySelector('.nl-form-row');
+        const msg = form.querySelector('.nl-success');
+        if (row) row.style.display = 'none';
+        if (msg) msg.style.display = 'block';
+      }, 800);
+    });
   });
 })();
 
