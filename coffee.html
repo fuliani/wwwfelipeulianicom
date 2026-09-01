@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; form-action 'self' https://formspree.io; base-uri 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Coffee | Felipe Uliani</title>
+  <meta name="description" content="Apply for a paid coffee conversation with Felipe Uliani.">
+  <meta name="theme-color" content="#071A2F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <p class="hero-meta">Coffee</p>
+      <h1>Apply for Time With Felipe</h1>
+      <p>This is a paid, 45&ndash;60 minute working conversation &mdash; not a sales call, not a favor. A few questions first, so we both know it's worth the time.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:640px;">
+
+      <form class="contact-form" action="https://formspree.io/f/xqpkqaon" method="POST" id="coffee-form">
+
+        <div class="form-group">
+          <label for="q1">What specific decision or problem are you hoping to work through in this conversation?</label>
+          <textarea id="q1" name="What specific decision or problem" required placeholder="Be concrete. Vague answers don't get picked."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="q2">What's the business context &mdash; your role, company stage, and what's at stake if this doesn't get resolved?</label>
+          <textarea id="q2" name="Business context and stakes" required placeholder="Your role, the company, and why this matters right now."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Smith">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@company.com">
+        </div>
+
+        <div class="form-group">
+          <label for="q4">What does success look like when this conversation ends? Be specific.</label>
+          <textarea id="q4" name="Definition of success" required placeholder="What would make this worth $2,000 to you?"></textarea>
+        </div>
+
+        <div class="bio-card" style="margin-bottom:24px;">
+          <h4>Before You Apply</h4>
+          <p style="margin-bottom:0;">This session costs <strong>$2,000</strong>, paid to confirm your spot. Submit the application below, then use the payment link to secure your time. I read every application &mdash; if the fit isn't right, I'll refund in full.</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Application</button>
+      </form>
+      <p id="form-success" style="display:none;margin-top:16px;color:#15803d;font-weight:600;">Thank you. Use the payment link below to secure your time &mdash; I'll follow up by email once it's confirmed.</p>
+
+      <div class="bio-card" style="margin-top:24px;">
+        <h4>Secure Your Time &mdash; $2,000</h4>
+        <p>Once you've submitted the application above, use this link to pay and confirm your spot.</p>
+        <a href="https://www.paypal.com/ncp/payment/EN35FZ284RNZJ" target="_blank" rel="noopener" class="btn btn-primary">Pay &amp; Confirm &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var form = document.getElementById('coffee-form');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var data = new FormData(form);
+        fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+          .then(function (r) {
+            if (r.ok) {
+              form.reset();
+              form.style.display = 'none';
+              document.getElementById('form-success').style.display = 'block';
+            }
+          });
+      });
+    })();
+  </script>
+</body>
+</html>
