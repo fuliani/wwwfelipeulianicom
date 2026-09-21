@@ -12,3 +12,6 @@ Thumbs.db
 .agent/
 .agents/
 node_modules/
+
+# local working drafts, never published
+drafts/
